@@ -1,0 +1,879 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     24098,        870]
+NotebookOptionsPosition[     18476,        662]
+NotebookOutlinePosition[     19098,        686]
+CellTagsIndexPosition[     19019,        681]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["WCSTools Package", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->296070698],
+
+Cell["WCSTools`", "Categorization",
+ CellLabel->"Context",
+ CellID->461113355],
+
+Cell["WCSTools/ref/WCSBPrecess", "Categorization",
+ CellLabel->"URI",
+ CellID->754057104]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["WCSBPrecess", "ObjectName",
+ CellID->1224892054],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData[
+  RowBox[{"WCSBPrecess", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     ButtonBox["RightAscension",
+      BaseStyle->"Link"], ",", " ", 
+     ButtonBox["Declination",
+      BaseStyle->"Link"]}], "}"}], "]"}]], "InlineFormula"],
+ "\[LineSeparator]calculates the mean place of a star at B1950.0 on the FK4 \
+system from the mean place at J2000.0 on the FK5 system. Input RightAscension \
+and Declination in decimal degrees."
+}], "Usage",
+ CellChangeTimes->{
+  3.475577650908289*^9, {3.4755796473283873`*^9, 3.475579667628415*^9}},
+ CellID->668128515],
+
+Cell[TextData[{
+ "Use ",
+ Cell[BoxData[
+  ButtonBox["WCSJPrecess",
+   BaseStyle->"Link",
+   ButtonData->"paclet:WCSTools/ref/WCSJPrecess"]], "InlineFormula"],
+ " for the reverse direction B1950\[LongRightArrow] J2000."
+}], "Notes",
+ CellChangeTimes->{{3.4755795953443117`*^9, 3.47557962079835*^9}, {
+  3.537978233663377*^9, 3.5379782700426407`*^9}},
+ CellID->338375201],
+
+Cell["Right Ascension and Declination input has to be in degrees.", "Notes",
+ CellChangeTimes->{{3.4755796724584217`*^9, 3.4755796881684437`*^9}},
+ CellID->43031008],
+
+Cell["The following options can be given: ", "Notes",
+ CellID->569579040],
+
+Cell[BoxData[GridBox[{
+   {Cell["   ", "ModInfo"], 
+    ButtonBox["ProperMotion",
+     BaseStyle->"Link",
+     ButtonData->"paclet:WCSToolsPrivate/ref/WCSTools`Private`ProperMotion"], 
+    RowBox[{"{", 
+     RowBox[{"0", ",", "0"}], "}"}], Cell["\<\
+Vector containing the proper motion in seconds of arc per tropical *century* \
+in right 
+ascension and declination.\
+\>", "TableText"]},
+   {Cell["   ", "ModInfo"], 
+    ButtonBox["StellarParallax",
+     BaseStyle->"Link",
+     ButtonData->
+      "paclet:WCSToolsPrivate/ref/WCSTools`Private`StellarParallax"], 
+    RowBox[{"{", "}"}], Cell[
+    "Stellar parallax in seconds of arc.", "TableText"]},
+   {Cell["   ", "ModInfo"], 
+    ButtonBox["RadialVelocity",
+     BaseStyle->"Link",
+     ButtonData->
+      "paclet:WCSToolsPrivate/ref/WCSTools`Private`RadialVelocity"], 
+    RowBox[{"{", "}"}], Cell["radial velocity in km/s.", "TableText"]},
+   {Cell["   ", "ModInfo"], 
+    ButtonBox["Epoch",
+     BaseStyle->"Link",
+     ButtonData->"paclet:WCSToolsPrivate/ref/WCSTools`Private`Epoch"], 
+    "2000.", Cell["\<\
+Epoch of original observations, default 2000. Only used if ProperMotion is \
+not set. \
+\>", "TableText"]}
+  }]], "3ColumnTableMod",
+ CellChangeTimes->{{3.475579280791833*^9, 3.475579303401864*^9}, {
+  3.4755793715619745`*^9, 3.475579551898239*^9}},
+ CellID->5025931],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox["WCSBPrecess",
+   BaseStyle->"Link",
+   ButtonData->"paclet:WCSTools/ref/WCSBPrecess"]], "InlineFormula"],
+ " has been ported from the IDL astrolib routine bprecess, originally written \
+by W. Landsman."
+}], "Notes",
+ CellChangeTimes->{{3.4755797346025205`*^9, 3.4755797833985925`*^9}},
+ CellID->87061634],
+
+Cell["\<\
+The algorithm is taken from the Explanatory Supplement to the Astronomical \
+Almanac 1992, page 184.
+Also see Aoki et al (1983), A&A, 128,263\
+\>", "Notes",
+ CellChangeTimes->{{3.47557971340049*^9, 3.475579725170506*^9}},
+ CellID->290567318]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell["WCSJPrecess", "SeeAlso",
+ CellChangeTimes->{{3.4755798026686196`*^9, 3.475579805148623*^9}},
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["WCSTools",
+ BaseStyle->"Link",
+ ButtonData->"paclet:WCSTools/guide/WCSTools"]], "MoreAbout",
+ CellChangeTimes->{{3.475579812890643*^9, 3.475579819090652*^9}},
+ CellID->1665078683]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151],
+
+Cell["\<\
+The SAO2000 catalogue gives the J2000 position and proper motion for the star \
+HD 119288:   \
+\>", "Notes",
+ CellChangeTimes->{{3.4755798684947233`*^9, 3.47557987839874*^9}, 
+   3.475579957736864*^9},
+ CellID->196555659],
+
+Cell["\<\
+R.A.(2000) = 13h 42m 12.740s      \[LineSeparator]Dec(2000) = 8d 23' 17.69''  \
+\[LineSeparator]\[Micro](R.A.) = -.0257 s/yr      \
+\[LineSeparator]\[Micro](Dec) = -.090 ''/yr\
+\>", "ExampleText",
+ CellChangeTimes->{{3.475579910114788*^9, 3.475579955076861*^9}},
+ CellID->492796431],
+
+Cell["Find the B1950 position.", "Notes",
+ CellChangeTimes->{{3.4755798684947233`*^9, 3.47557987839874*^9}},
+ CellID->84408131],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"\[Micro]", "=", 
+   RowBox[{"100", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"-", "15"}], "*", ".0257"}], ",", 
+      RowBox[{"-", "0.090"}]}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ra", "=", 
+    RowBox[{
+     RowBox[{"FromDMS", "[", 
+      RowBox[{"{", 
+       RowBox[{"13", ",", "42", ",", "12.74"}], "}"}], "]"}], "*", "15"}]}], 
+   " ", ";"}], 
+  RowBox[{"(*", " ", 
+   RowBox[{
+    RowBox[{"1", " ", "hour"}], " ", "=", " ", 
+    RowBox[{"15", " ", "Degree"}]}], "*)"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"dec", "=", 
+   RowBox[{"FromDMS", "[", 
+    RowBox[{"{", 
+     RowBox[{"8", ",", "23", ",", "17.69"}], "}"}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.475580009490939*^9, 3.4755800304509687`*^9}, {
+  3.4757701519360795`*^9, 3.47577017375611*^9}, {3.4757702072061567`*^9, 
+  3.4757702255981836`*^9}, {3.4757703094583015`*^9, 3.4757703104383025`*^9}, {
+  3.4757703827484035`*^9, 3.4757703904384146`*^9}},
+ CellLabel->"In[31]:=",
+ CellID->174753108],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"<<", "WCSTools`"}], "\[IndentingNewLine]", 
+ RowBox[{"WCSBPrecess", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"ra", ",", "dec"}], "}"}], ",", 
+   RowBox[{"ProperMotion", "\[Rule]", "\[Micro]"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.475770251018219*^9, 3.475770284028266*^9}, {
+  3.4757703223183193`*^9, 3.475770357218368*^9}},
+ CellLabel->"In[33]:=",
+ CellID->729858],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"204.9355251563212`", ",", "8.64128718388616`"}], "}"}]], "Output",
+ CellChangeTimes->{{3.475770337898341*^9, 3.4757703582083693`*^9}, 
+   3.475770393008418*^9},
+ CellLabel->"Out[34]=",
+ CellID->827775923]
+}, Open  ]],
+
+Cell["Convert back to Sexagesimal notation", "Notes",
+ CellChangeTimes->{{3.475770426610489*^9, 3.4757704413005095`*^9}},
+ CellID->592052896],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSList", "[", "%", "]"}]], "Input",
+ CellChangeTimes->{{3.4757704445505137`*^9, 3.47577044887052*^9}},
+ CellLabel->"In[35]:=",
+ CellID->252429494],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"13", ",", "39", ",", "44.52603751708921`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"8", ",", "38", ",", "28.633861990175262`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.4757704496205206`*^9},
+ CellLabel->"Out[35]=",
+ CellID->911672696]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Options", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->306436993],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["ProperMotion", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.475770537680644*^9, 3.4757705400506477`*^9}},
+ CellID->110401893],
+
+Cell["\<\
+Proper motions are to be given in units of {arc seconds/century, arc \
+seconds/century}.  To convert from seconds/century to arc seconds/century \
+multiply by 15:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.475772216863764*^9, 3.475772270197841*^9}},
+ CellID->763829249],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSBPrecess", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"FromDMS", "[", 
+       RowBox[{"{", 
+        RowBox[{"02", ",", "31", ",", "49.8131"}], "}"}], "]"}], "*", "15"}], 
+     ",", 
+     RowBox[{"FromDMS", "[", 
+      RowBox[{"+", 
+       RowBox[{"{", 
+        RowBox[{"89", ",", "15", ",", "50.661"}], "}"}]}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"ProperMotion", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"21.7272", "*", "15"}], ",", 
+      RowBox[{"-", "1.571"}]}], "}"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4757723067318945`*^9, 3.475772368391981*^9}},
+ CellLabel->"In[70]:=",
+ CellID->515168008],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"27.203267909846055`", ",", "89.02881654548146`"}], "}"}]], "Output",
+ CellChangeTimes->{3.4757723697419825`*^9},
+ CellLabel->"Out[70]=",
+ CellID->90317403]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSList", "@", "%"}]], "Input",
+ CellChangeTimes->{{3.4757723730719876`*^9, 3.475772376741993*^9}},
+ CellLabel->"In[71]:=",
+ CellID->24290677],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"1", ",", "48", ",", "48.78429836305315`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"89", ",", "1", ",", "43.73956373326223`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.4757723772719936`*^9},
+ CellLabel->"Out[71]=",
+ CellID->45702854]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["StellarParallax", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.4757705445506535`*^9, 3.4757705445506535`*^9}},
+ CellID->93372012],
+
+Cell[TextData[{
+ "Convert FK5 (J2000) position to FK4 (B1950) acounting for proper motion, \
+stellar parallax and radial velocity. Tabulated values for proper motions are \
+usually given in {R.A., Dec} coordinates, i.e. (seconds, arc seconds) but \
+need to be converted to {arc second, arc second} to be used in ",
+ Cell[BoxData[
+  ButtonBox["WCSBPrecess",
+   BaseStyle->"Link",
+   ButtonData->"paclet:WCSTools/ref/WCSBPrecess"]], "InlineFormula"],
+ ".  Stellar parallaxes have to be provided in arc seconds."
+}], "ExampleText",
+ CellChangeTimes->{{3.4757710801337175`*^9, 3.4757710951337385`*^9}, {
+   3.4757719881914353`*^9, 3.475772202411742*^9}, 3.4757724098460464`*^9},
+ CellLabel->"In[42]:=",
+ CellID->40684682],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSBPrecess", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"FromDMS", "[", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "20", ",", "4.3100"}], "}"}], "]"}], "*", "15"}], 
+     ",", 
+     RowBox[{"FromDMS", "[", 
+      RowBox[{"-", 
+       RowBox[{"{", 
+        RowBox[{"64", ",", "52", ",", "29.332"}], "}"}]}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"ProperMotion", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"26.8649", "*", "15"}], ",", "116.285"}], "}"}]}], ",", 
+   RowBox[{"StellarParallax", "\[Rule]", "0.134"}], ",", 
+   RowBox[{"RadialVelocity", "\[Rule]", "8.74"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4757709692795587`*^9, 3.4757710566296806`*^9}, 
+   3.475771097043741*^9, 3.475771131143789*^9, {3.4757712017858906`*^9, 
+   3.4757712094659014`*^9}, {3.475771375532502*^9, 3.4757714533926105`*^9}, {
+   3.4757717935771236`*^9, 3.4757718939752693`*^9}},
+ CellLabel->"In[68]:=",
+ CellID->470329546],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"4.3698913920395`", ",", 
+   RowBox[{"-", "65.16852772730446`"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.4757710601936893`*^9, 3.475771098003742*^9, 3.4757711316637897`*^9, {
+   3.4757712038558936`*^9, 3.475771209905902*^9}, {3.4757714428925962`*^9, 
+   3.4757714539026117`*^9}, {3.475771861943223*^9, 3.475771899617278*^9}},
+ CellLabel->"Out[68]=",
+ CellID->236748844]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSList", "[", "%", "]"}]], "Input",
+ CellLabel->"In[69]:=",
+ CellID->782238177],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "17", ",", "28.773934089480093`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "65"}], ",", "10", ",", "6.69981829607309`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{{3.4757711116437616`*^9, 3.4757711347037935`*^9}, 
+   3.4757712135379086`*^9, {3.4757714450325994`*^9, 3.4757714569946175`*^9}, {
+   3.4757718628432245`*^9, 3.4757719004872794`*^9}},
+ CellLabel->"Out[69]=",
+ CellID->58161825]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["RadialVelocity", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.4757705486406593`*^9, 3.4757705486406593`*^9}},
+ CellID->399494157],
+
+Cell["Radial velocities have to be given in km/s", "ExampleText",
+ CellChangeTimes->{{3.475772490830162*^9, 3.4757725014321785`*^9}},
+ CellID->466320726],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSBPrecess", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"FromDMS", "[", 
+       RowBox[{"{", 
+        RowBox[{"11", ",", "52", ",", "58.7461"}], "}"}], "]"}], "*", "15"}], 
+     ",", 
+     RowBox[{"FromDMS", "[", 
+      RowBox[{"+", 
+       RowBox[{"{", 
+        RowBox[{"37", ",", "43", ",", "07.456"}], "}"}]}], "]"}]}], "}"}], 
+   ",", 
+   RowBox[{"ProperMotion", "\[Rule]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"33.7156", "*", "15"}], ",", 
+      RowBox[{"-", "581.216"}]}], "}"}]}], ",", 
+   RowBox[{"StellarParallax", "\[Rule]", "0.1161"}], ",", 
+   RowBox[{"RadialVelocity", "\[Rule]", 
+    RowBox[{"-", "97.81"}]}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.4757725153821983`*^9, 3.4757725805462914`*^9}},
+ CellLabel->"In[72]:=",
+ CellID->277768159],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"177.5257166031071`", ",", "38.07754155420718`"}], "}"}]], "Output",
+ CellChangeTimes->{3.4757725811362925`*^9},
+ CellLabel->"Out[72]=",
+ CellID->97321326]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSList", "@", "%"}]], "Input",
+ CellChangeTimes->{{3.475772584226297*^9, 3.475772586916301*^9}},
+ CellLabel->"In[73]:=",
+ CellID->80420223],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"11", ",", "50", ",", "6.171984745703867`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"38", ",", "4", ",", "39.14959514584723`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.4757725873663015`*^9},
+ CellLabel->"Out[73]=",
+ CellID->870075455]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Epoch", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.4757705585506735`*^9, 3.4757705585506735`*^9}},
+ CellID->57790117],
+
+Cell["\<\
+Convert from a different epoch than 2000 (requires proper motion to be {0,0}).\
+\>", "ExampleText",
+ CellChangeTimes->{{3.4757705886007156`*^9, 3.4757706704068375`*^9}},
+ CellID->350631787],
+
+Cell["\<\
+For example calculates how much the origin of the coordinate system shifts \
+due to precession over 10 years.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.4757706760768456`*^9, 3.475770699216878*^9}},
+ CellID->811800892],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSBPrecess", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"0", ",", "0"}], "}"}], ",", 
+   RowBox[{"Epoch", "\[Rule]", "1960"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.475770652994809*^9, 3.4757706630348234`*^9}, {
+  3.4757707123668966`*^9, 3.4757707346969275`*^9}},
+ CellLabel->"In[38]:=",
+ CellID->430096306],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"359.35930798420225`", ",", 
+   RowBox[{"-", "0.2784099002627802`"}]}], "}"}]], "Output",
+ CellChangeTimes->{
+  3.475770663974825*^9, {3.475770718356905*^9, 3.475770735136928*^9}},
+ CellLabel->"Out[38]=",
+ CellID->8446973]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (October 6, 2011)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[9901, 371, 100, 2, 53, "ExtendedExamplesSection",
+   CellTags->"ExtendedExamples",
+   CellID->1854448968]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 18881, 674}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 324, 14, 22, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[894, 38, 68, 1, 27, "CategorizationSection",
+ CellID->1122911449],
+Cell[965, 41, 79, 2, 21, "Categorization",
+ CellID->686433507],
+Cell[1047, 45, 89, 2, 21, "Categorization",
+ CellID->296070698],
+Cell[1139, 49, 78, 2, 21, "Categorization",
+ CellID->461113355],
+Cell[1220, 53, 89, 2, 21, "Categorization",
+ CellID->754057104]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1346, 60, 55, 1, 17, "KeywordsSection",
+ CellID->477174294],
+Cell[1404, 63, 45, 1, 93, "Keywords",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1486, 69, 65, 1, 17, "TemplatesSection",
+ CellID->1872225408],
+Cell[1554, 72, 94, 2, 93, "Template",
+ CellID->1562036412],
+Cell[1651, 76, 82, 2, 93, "Template",
+ CellID->158391909],
+Cell[1736, 80, 81, 2, 93, "Template",
+ CellID->1360575930],
+Cell[1820, 84, 82, 2, 93, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1939, 91, 53, 1, 17, "DetailsSection",
+ CellID->307771771],
+Cell[1995, 94, 63, 2, 93, "Details",
+ CellID->670882175],
+Cell[2061, 98, 69, 2, 93, "Details",
+ CellID->350963985],
+Cell[2133, 102, 64, 2, 93, "Details",
+ CellID->8391405],
+Cell[2200, 106, 69, 2, 93, "Details",
+ CellID->3610269],
+Cell[2272, 110, 61, 2, 93, "Details",
+ CellID->401364205],
+Cell[2336, 114, 61, 2, 93, "Details",
+ CellID->350204745],
+Cell[2400, 118, 63, 2, 93, "Details",
+ CellID->732958810],
+Cell[2466, 122, 78, 2, 93, "Details",
+ CellID->222905350],
+Cell[2547, 126, 67, 2, 93, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2651, 133, 54, 1, 62, "ObjectName",
+ CellID->1224892054],
+Cell[2708, 136, 598, 16, 85, "Usage",
+ CellID->668128515],
+Cell[3309, 154, 369, 10, 25, "Notes",
+ CellID->338375201],
+Cell[3681, 166, 165, 2, 23, "Notes",
+ CellID->43031008],
+Cell[3849, 170, 73, 1, 23, "Notes",
+ CellID->569579040],
+Cell[3925, 173, 1333, 35, 117, "3ColumnTableMod",
+ CellID->5025931],
+Cell[5261, 210, 348, 9, 39, "Notes",
+ CellID->87061634],
+Cell[5612, 221, 251, 6, 51, "Notes",
+ CellID->290567318]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5900, 232, 55, 1, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[5958, 235, 118, 2, 16, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6113, 242, 57, 1, 30, "MoreAboutSection",
+ CellID->38303248],
+Cell[6173, 245, 204, 4, 16, "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6414, 254, 356, 11, 68, "PrimaryExamplesSection",
+ CellID->880084151],
+Cell[6773, 267, 231, 6, 23, "Notes",
+ CellID->196555659],
+Cell[7007, 275, 292, 6, 59, "ExampleText",
+ CellID->492796431],
+Cell[7302, 283, 127, 2, 23, "Notes",
+ CellID->84408131],
+Cell[7432, 287, 1072, 31, 68, "Input",
+ CellID->174753108],
+Cell[CellGroupData[{
+Cell[8529, 322, 401, 10, 48, "Input",
+ CellID->729858],
+Cell[8933, 334, 244, 6, 25, "Output",
+ CellID->827775923]
+}, Open  ]],
+Cell[9192, 343, 141, 2, 23, "Notes",
+ CellID->592052896],
+Cell[CellGroupData[{
+Cell[9358, 349, 171, 4, 27, "Input",
+ CellID->252429494],
+Cell[9532, 355, 320, 10, 25, "Output",
+ CellID->911672696]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9901, 371, 100, 2, 53, "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+Cell[CellGroupData[{
+Cell[10026, 377, 126, 3, 30, "ExampleSection",
+ CellID->306436993],
+Cell[CellGroupData[{
+Cell[10177, 384, 205, 4, 21, "ExampleSubsection",
+ CellID->110401893],
+Cell[10385, 390, 279, 6, 43, "ExampleText",
+ CellID->763829249],
+Cell[CellGroupData[{
+Cell[10689, 400, 683, 22, 62, "Input",
+ CellID->515168008],
+Cell[11375, 424, 195, 5, 32, "Output",
+ CellID->90317403]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11607, 434, 166, 4, 35, "Input",
+ CellID->24290677],
+Cell[11776, 440, 317, 10, 32, "Output",
+ CellID->45702854]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[12142, 456, 209, 4, 17, "ExampleSubsection",
+ CellID->93372012],
+Cell[12354, 462, 717, 14, 82, "ExampleText",
+ CellID->40684682],
+Cell[CellGroupData[{
+Cell[13096, 480, 981, 26, 89, "Input",
+ CellID->470329546],
+Cell[14080, 508, 413, 9, 32, "Output",
+ CellID->236748844]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14530, 522, 104, 3, 35, "Input",
+ CellID->782238177],
+Cell[14637, 527, 497, 13, 32, "Output",
+ CellID->58161825]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[15183, 546, 209, 4, 17, "ExampleSubsection",
+ CellID->399494157],
+Cell[15395, 552, 153, 2, 26, "ExampleText",
+ CellID->466320726],
+Cell[CellGroupData[{
+Cell[15573, 558, 823, 25, 89, "Input",
+ CellID->277768159],
+Cell[16399, 585, 194, 5, 32, "Output",
+ CellID->97321326]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16630, 595, 164, 4, 35, "Input",
+ CellID->80420223],
+Cell[16797, 601, 319, 10, 32, "Output",
+ CellID->870075455]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[17165, 617, 199, 4, 17, "ExampleSubsection",
+ CellID->57790117],
+Cell[17367, 623, 199, 4, 26, "ExampleText",
+ CellID->350631787],
+Cell[17569, 629, 228, 5, 43, "ExampleText",
+ CellID->811800892],
+Cell[CellGroupData[{
+Cell[17822, 638, 338, 9, 35, "Input",
+ CellID->430096306],
+Cell[18163, 649, 261, 7, 32, "Output",
+ CellID->8446973]
+}, Open  ]]
+}, Closed]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

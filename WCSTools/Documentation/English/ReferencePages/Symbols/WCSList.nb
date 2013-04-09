@@ -1,0 +1,541 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     13497,        532]
+NotebookOptionsPosition[      9475,        385]
+NotebookOutlinePosition[     10100,        409]
+CellTagsIndexPosition[     10022,        404]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["WCSTools Package", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->61285263],
+
+Cell["WCSTools`", "Categorization",
+ CellLabel->"Context",
+ CellID->111581927],
+
+Cell["WCSTools/ref/WCSList", "Categorization",
+ CellLabel->"URI",
+ CellID->486086871]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["WCSList", "ObjectName",
+ CellID->1224892054],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData[
+  RowBox[{"WCSList", "[", 
+   RowBox[{"{", 
+    RowBox[{
+     ButtonBox["RightAscension",
+      BaseStyle->"Link"], ",", " ", 
+     ButtonBox["Declination",
+      BaseStyle->"Link"]}], "}"}], "]"}]], "InlineFormula"],
+ "\[LineSeparator]Return R.A. (Right Ascension) and Dec (Declination) as \
+list(s) in sexigesimal format. RA and Dec may be entered as either a 2 \
+element vector or as two separate vectors (or scalars)."
+}], "Usage",
+ CellChangeTimes->{3.475577654280295*^9, 3.475774122708913*^9}],
+
+Cell["The following options can be given: ", "Notes"],
+
+Cell[BoxData[GridBox[{
+   {Cell["   ", "ModInfo"], 
+    ButtonBox["RightAscension",
+     BaseStyle->"Link",
+     ButtonData->
+      "paclet:WCSToolsPrivate/ref/WCSTools`Private`RightAscension"], 
+    ButtonBox["True",
+     BaseStyle->"Link"], Cell[
+    "Interpret input as Right Ascension only.", "TableText"]},
+   {Cell["   ", "ModInfo"], 
+    ButtonBox["Declination",
+     BaseStyle->"Link",
+     ButtonData->"paclet:WCSToolsPrivate/ref/WCSTools`Private`Declination"], 
+    ButtonBox["True",
+     BaseStyle->"Link"], Cell["\<\
+Specifies how to interpret input of only one number. Default is to interpretz \
+it as Declination\
+\>", "TableText"]},
+   {Cell["   ", "ModInfo"], 
+    ButtonBox["Hours",
+     BaseStyle->"Link",
+     ButtonData->"paclet:WCSToolsPrivate/ref/WCSTools`Private`Hours"], 
+    ButtonBox["False",
+     BaseStyle->"Link"], Cell["\<\
+Specifies wether right ascension is given in units of Degree (False) or Hours \
+(True) \
+\>", "TableText"]}
+  }]], "3ColumnTableMod",
+ CellChangeTimes->{{3.475773544011038*^9, 3.475773603054122*^9}, {
+  3.4757737532023373`*^9, 3.475773809504423*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ ButtonBox["FromDMS",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/FromDMS"],
+ " . ",
+ ButtonBox["DMSList",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/DMSList"],
+ " . ",
+ ButtonBox["DMSString",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/DMSString"]
+}], "SeeAlso",
+ CellChangeTimes->{{3.4757740568188143`*^9, 3.4757740952428703`*^9}},
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More About", "MoreAboutSection",
+ CellID->38303248],
+
+Cell[TextData[ButtonBox["WCSTools",
+ BaseStyle->"Link",
+ ButtonData->"paclet:WCSTools/guide/WCSTools"]], "MoreAbout",
+ CellChangeTimes->{{3.475774098224876*^9, 3.475774103174883*^9}},
+ CellID->1665078683]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151],
+
+Cell["Convert decimal degrees to sexagesimal numbers:", "ExampleText",
+ CellChangeTimes->{{3.4757738224444413`*^9, 3.4757738346584606`*^9}},
+ CellID->253245895],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSList", "[", 
+  RowBox[{"{", 
+   RowBox[{"168.20005345330242`", ",", 
+    RowBox[{"-", "61.19994031190537`"}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[94]:=",
+ CellID->595041819],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"11", ",", "12", ",", "48.01282879257997`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "61"}], ",", "11", ",", "59.78512285934073`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.4757738414024725`*^9},
+ CellLabel->"Out[94]=",
+ CellID->520482572]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Options", "ExampleSection"],
+  $Line = 0; Null]], "ExampleSection"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["RightAscension", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.475773862764504*^9, 3.4757738651845074`*^9}}],
+
+Cell["\<\
+To convert only a right ascension value you have to set Declination to False:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.475773922832593*^9, 3.4757739514426327`*^9}},
+ CellID->561347883],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSList", "[", 
+  RowBox[{"168.20005345330242`", ",", 
+   RowBox[{"Declination", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellLabel->"In[96]:=",
+ CellID->437188267],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"11", ",", "12", ",", "48.01282879257997`"}], "}"}]], "Output",
+ CellChangeTimes->{3.4757739612346478`*^9},
+ CellLabel->"Out[96]=",
+ CellID->3206900]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["Declination", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellChangeTimes->{{3.475773868526513*^9, 3.4757738702765155`*^9}}],
+
+Cell["\<\
+When only a single number is provided as input it is interpreted as \
+declination:\
+\>", "ExampleText",
+ CellChangeTimes->{{3.475773876836525*^9, 3.4757738906285453`*^9}},
+ CellID->230024252],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSList", "[", 
+  RowBox[{"-", "61.19994031190537`"}], "]"}]], "Input",
+ CellChangeTimes->{{3.4757739004785595`*^9, 3.4757739026205635`*^9}},
+ CellLabel->"In[95]:=",
+ CellID->100136854],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"-", "61"}], ",", "11", ",", "59.78512285934073`"}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.4757739033505645`*^9},
+ CellLabel->"Out[95]=",
+ CellID->463749069]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell["WCSTools`Private`Hours", "ExampleSubsection"],
+  $Line = 0; Null]], "ExampleSubsection"],
+
+Cell[TextData[{
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " assumes that the input is given in units of degree. To give right \
+ascension values in hours you have to set Hours\[Rule]True"
+}], "ExampleText",
+ CellChangeTimes->{{3.4757739738646655`*^9, 3.475774021922762*^9}},
+ CellID->138432400],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSList", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"11.213336896886828`", ",", 
+     RowBox[{"-", "61.19994031190537`"}]}], "}"}], ",", 
+   RowBox[{"Hours", "\[Rule]", "True"}]}], "]"}]], "Input",
+ CellLabel->"In[97]:=",
+ CellID->10053183],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"11", ",", "12", ",", "48.01282879257997`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"-", "61"}], ",", "11", ",", "59.78512285934073`"}], "}"}]}], 
+  "}"}]], "Output",
+ CellChangeTimes->{3.4757740350547814`*^9},
+ CellLabel->"Out[97]=",
+ CellID->346251954]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{Automatic, 276}, {5, Automatic}},
+CellContext->"Global`",
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (February 18, 2009)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[6372, 266, 100, 2, 53, "ExtendedExamplesSection",
+   CellTags->"ExtendedExamples",
+   CellID->1854448968]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 9884, 397}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 324, 14, 22, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[894, 38, 68, 1, 27, "CategorizationSection",
+ CellID->1122911449],
+Cell[965, 41, 79, 2, 17, "Categorization",
+ CellID->686433507],
+Cell[1047, 45, 88, 2, 17, "Categorization",
+ CellID->61285263],
+Cell[1138, 49, 78, 2, 17, "Categorization",
+ CellID->111581927],
+Cell[1219, 53, 85, 2, 17, "Categorization",
+ CellID->486086871]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1341, 60, 55, 1, 17, "KeywordsSection",
+ CellID->477174294],
+Cell[1399, 63, 45, 1, 70, "Keywords",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1481, 69, 65, 1, 17, "TemplatesSection",
+ CellID->1872225408],
+Cell[1549, 72, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1646, 76, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1731, 80, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[1815, 84, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1934, 91, 53, 1, 17, "DetailsSection",
+ CellID->307771771],
+Cell[1990, 94, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2056, 98, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2128, 102, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2195, 106, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2267, 110, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2331, 114, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2395, 118, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2461, 122, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2542, 126, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2646, 133, 50, 1, 62, "ObjectName",
+ CellID->1224892054],
+Cell[2699, 136, 555, 14, 85, "Usage"],
+Cell[3257, 152, 53, 0, 23, "Notes"],
+Cell[3313, 154, 1104, 29, 100, "3ColumnTableMod"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4454, 188, 55, 1, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[4512, 191, 379, 14, 16, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4928, 210, 57, 1, 30, "MoreAboutSection",
+ CellID->38303248],
+Cell[4988, 213, 204, 4, 16, "MoreAbout",
+ CellID->1665078683]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5229, 222, 356, 11, 68, "PrimaryExamplesSection",
+ CellID->880084151],
+Cell[5588, 235, 160, 2, 20, "ExampleText",
+ CellID->253245895],
+Cell[CellGroupData[{
+Cell[5773, 241, 206, 6, 27, "Input",
+ CellID->595041819],
+Cell[5982, 249, 341, 11, 25, "Output",
+ CellID->520482572]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6372, 266, 100, 2, 53, "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->1854448968],
+Cell[CellGroupData[{
+Cell[6497, 272, 106, 2, 30, "ExampleSection"],
+Cell[CellGroupData[{
+Cell[6628, 278, 187, 3, 21, "ExampleSubsection"],
+Cell[6818, 283, 196, 4, 20, "ExampleText",
+ CellID->561347883],
+Cell[CellGroupData[{
+Cell[7039, 291, 189, 5, 27, "Input",
+ CellID->437188267],
+Cell[7231, 298, 188, 5, 25, "Output",
+ CellID->3206900]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7468, 309, 184, 3, 21, "ExampleSubsection"],
+Cell[7655, 314, 201, 5, 20, "ExampleText",
+ CellID->230024252],
+Cell[CellGroupData[{
+Cell[7881, 323, 209, 5, 27, "Input",
+ CellID->100136854],
+Cell[8093, 330, 212, 7, 25, "Output",
+ CellID->463749069]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8354, 343, 127, 2, 21, "ExampleSubsection"],
+Cell[8484, 347, 302, 7, 33, "ExampleText",
+ CellID->138432400],
+Cell[CellGroupData[{
+Cell[8811, 358, 268, 8, 27, "Input",
+ CellID->10053183],
+Cell[9082, 368, 341, 11, 25, "Output",
+ CellID->346251954]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,9 @@
+Resources[
+    Version[1],
+    ExecutionBuildCommand["<<WCSTools`"],
+    Paclet[
+        DocumentationFolder["WCSTools/Documentation/English"],
+        PacletFolder["WCSTools"],
+        FunctionPaclet[False]
+    ]
+]

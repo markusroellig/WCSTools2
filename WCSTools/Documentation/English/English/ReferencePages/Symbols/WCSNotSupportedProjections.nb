@@ -1,0 +1,390 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[      9658,        380]
+NotebookOptionsPosition[      6597,        268]
+NotebookOutlinePosition[      7046,        285]
+CellTagsIndexPosition[      7003,        282]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised"]
+}], "History",
+ CellID->1247902091],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1122911449],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->686433507],
+
+Cell["WCSTools Package", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->23883004],
+
+Cell["WCSTools`", "Categorization",
+ CellLabel->"Context",
+ CellID->385048009],
+
+Cell["WCSTools/ref/WCSNotSupportedProjections", "Categorization",
+ CellLabel->"URI",
+ CellID->682929415]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->477174294],
+
+Cell["XXXX", "Keywords",
+ CellID->1164421360]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1872225408],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1562036412],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->158391909],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1360575930],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->793782254]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Details", "DetailsSection",
+ CellID->307771771],
+
+Cell["XXXX", "Details",
+ CellLabel->"Lead",
+ CellID->670882175],
+
+Cell["XXXX", "Details",
+ CellLabel->"Developers",
+ CellID->350963985],
+
+Cell["XXXX", "Details",
+ CellLabel->"Authors",
+ CellID->8391405],
+
+Cell["XXXX", "Details",
+ CellLabel->"Feature Name",
+ CellID->3610269],
+
+Cell["XXXX", "Details",
+ CellLabel->"QA",
+ CellID->401364205],
+
+Cell["XXXX", "Details",
+ CellLabel->"DA",
+ CellID->350204745],
+
+Cell["XXXX", "Details",
+ CellLabel->"Docs",
+ CellID->732958810],
+
+Cell["XXXX", "Details",
+ CellLabel->"Features Page Notes",
+ CellID->222905350],
+
+Cell["XXXX", "Details",
+ CellLabel->"Comments",
+ CellID->240026365]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["WCSNotSupportedProjections", "ObjectName",
+ CellID->1224892054],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo"],
+ Cell[BoxData[
+  RowBox[{"WCSNotSupportedProjections", "[", "]"}]], "InlineFormula"],
+ "\[LineSeparator]gives a list of currently not yet supported map projections."
+}], "Usage",
+ CellChangeTimes->{3.4755778741548996`*^9},
+ CellID->111815474],
+
+Cell["\<\
+Currently, WCSTools does not fully support the map projections specified in \
+the World Coordinate Systems (WCS).\
+\>", "Notes",
+ CellChangeTimes->{{3.475578613136634*^9, 3.475578651576688*^9}},
+ CellID->1067943069],
+
+Cell["\<\
+The map projection type is specified by the CTYPE keywords from the FITS \
+header information. \
+\>", "Notes",
+ CellChangeTimes->{{3.475578668346711*^9, 3.4755786866667366`*^9}, {
+  3.4755787250087986`*^9, 3.4755787436308327`*^9}},
+ CellID->831185743],
+
+Cell[TextData[{
+ "The FITS header information can be read by ",
+ ButtonBox["Import",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/Import"],
+ "[\"file name\", \"Metadata\"]."
+}], "Notes",
+ CellChangeTimes->{{3.475578822310943*^9, 3.475578868757018*^9}},
+ CellID->177705402]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tutorials", "TutorialsSection",
+ CellID->250839057],
+
+Cell["WCSTools", "Tutorials",
+ CellChangeTimes->{{3.475578547964534*^9, 3.4755785492845354`*^9}},
+ CellID->341631938]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "RelatedLinksSection",
+ CellID->1584193535],
+
+Cell[TextData[ButtonBox["FITS World Coordinate Systems",
+ BaseStyle->"Hyperlink",
+ ButtonData->{
+   URL["http://www.atnf.csiro.au/people/mcalabre/WCS/"], 
+   None}]], "RelatedLinks",
+ CellChangeTimes->{{3.475579084851493*^9, 3.475579105533544*^9}},
+ CellID->1038487239]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1255426704],
+
+Cell[TextData[{
+ Cell[BoxData[
+  ButtonBox[
+   ButtonBox["WCSSupportedProjections",
+    BaseStyle->"Link",
+    ButtonData->"paclet:WCSTools/ref/WCSNotSupportedProjections"],
+   BaseStyle->"Link",
+   ButtonData->"paclet:WCSTools/ref/"]], "InlineFormula"],
+ " . ",
+ ButtonBox["FITS",
+  BaseStyle->"Link",
+  ButtonData->"paclet:ref/format/FITS"]
+}], "SeeAlso",
+ CellChangeTimes->{{3.4755785395545216`*^9, 3.4755785421845255`*^9}, {
+  3.475578753550847*^9, 3.475578756710851*^9}, {3.4755787919309006`*^9, 
+  3.475578795060905*^9}, {3.4755788783770323`*^9, 3.475578882727038*^9}, {
+  3.4755789208030987`*^9, 3.475578920813099*^9}, {3.4755790024273252`*^9, 
+  3.4755790028573256`*^9}, {3.4755791211565666`*^9, 3.475579121185567*^9}},
+ CellID->929782353]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->880084151],
+
+Cell["\<\
+Show which celestial map projections are currently supported by WCSTools\
+\>", "Notes",
+ CellChangeTimes->{{3.4755784467623825`*^9, 3.475578447202383*^9}, {
+  3.4755784853724365`*^9, 3.475578503754471*^9}},
+ CellID->2235632],
+
+Cell[BoxData[
+ RowBox[{"<<", "WCSTools`"}]], "Input",
+ CellChangeTimes->{{3.475578435002366*^9, 3.4755784399923725`*^9}},
+ CellLabel->"In[7]:=",
+ CellID->226798864],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"WCSNotSupportedProjections", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.4755785093044786`*^9, 3.4755785276845055`*^9}, {
+  3.475579022059354*^9, 3.475579022409354*^9}},
+ CellLabel->"In[12]:=",
+ CellID->44033497],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{"\<\"AIR\"\>", ",", "\<\"PCO\"\>", ",", "\<\"CSC\"\>", 
+   ",", "\<\"QSC\"\>", ",", "\<\"TSC\"\>"}], "}"}]], "Print",
+ CellChangeTimes->{3.4755785286145067`*^9, 3.4755790235093555`*^9},
+ CellLabel->"During evaluation of In[12]:=",
+ CellID->276328220]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{700, 770},
+WindowMargins->{{4, Automatic}, {Automatic, 0}},
+CellContext->"Global`",
+FrontEndVersion->"7.0 for Microsoft Windows (64-bit) (February 18, 2009)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStyles.nb", 
+  CharacterEncoding -> "WindowsANSI"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 324, 14, 22, "History",
+ CellID->1247902091],
+Cell[CellGroupData[{
+Cell[894, 38, 68, 1, 27, "CategorizationSection",
+ CellID->1122911449],
+Cell[965, 41, 79, 2, 17, "Categorization",
+ CellID->686433507],
+Cell[1047, 45, 88, 2, 17, "Categorization",
+ CellID->23883004],
+Cell[1138, 49, 78, 2, 17, "Categorization",
+ CellID->385048009],
+Cell[1219, 53, 104, 2, 17, "Categorization",
+ CellID->682929415]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1360, 60, 55, 1, 17, "KeywordsSection",
+ CellID->477174294],
+Cell[1418, 63, 45, 1, 70, "Keywords",
+ CellID->1164421360]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1500, 69, 65, 1, 17, "TemplatesSection",
+ CellID->1872225408],
+Cell[1568, 72, 94, 2, 70, "Template",
+ CellID->1562036412],
+Cell[1665, 76, 82, 2, 70, "Template",
+ CellID->158391909],
+Cell[1750, 80, 81, 2, 70, "Template",
+ CellID->1360575930],
+Cell[1834, 84, 82, 2, 70, "Template",
+ CellID->793782254]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1953, 91, 53, 1, 17, "DetailsSection",
+ CellID->307771771],
+Cell[2009, 94, 63, 2, 70, "Details",
+ CellID->670882175],
+Cell[2075, 98, 69, 2, 70, "Details",
+ CellID->350963985],
+Cell[2147, 102, 64, 2, 70, "Details",
+ CellID->8391405],
+Cell[2214, 106, 69, 2, 70, "Details",
+ CellID->3610269],
+Cell[2286, 110, 61, 2, 70, "Details",
+ CellID->401364205],
+Cell[2350, 114, 61, 2, 70, "Details",
+ CellID->350204745],
+Cell[2414, 118, 63, 2, 70, "Details",
+ CellID->732958810],
+Cell[2480, 122, 78, 2, 70, "Details",
+ CellID->222905350],
+Cell[2561, 126, 67, 2, 70, "Details",
+ CellID->240026365]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[2665, 133, 69, 1, 62, "ObjectName",
+ CellID->1224892054],
+Cell[2737, 136, 283, 7, 71, "Usage",
+ CellID->111815474],
+Cell[3023, 145, 225, 5, 37, "Notes",
+ CellID->1067943069],
+Cell[3251, 152, 261, 6, 23, "Notes",
+ CellID->831185743],
+Cell[3515, 160, 274, 8, 23, "Notes",
+ CellID->177705402]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3826, 173, 57, 1, 43, "TutorialsSection",
+ CellID->250839057],
+Cell[3886, 176, 117, 2, 16, "Tutorials",
+ CellID->341631938]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4040, 183, 65, 1, 30, "RelatedLinksSection",
+ CellID->1584193535],
+Cell[4108, 186, 269, 6, 16, "RelatedLinks",
+ CellID->1038487239]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4414, 197, 55, 1, 30, "SeeAlsoSection",
+ CellID->1255426704],
+Cell[4472, 200, 747, 18, 19, "SeeAlso",
+ CellID->929782353]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5256, 223, 356, 11, 68, "PrimaryExamplesSection",
+ CellID->880084151],
+Cell[5615, 236, 234, 5, 23, "Notes",
+ CellID->2235632],
+Cell[5852, 243, 164, 4, 27, "Input",
+ CellID->226798864],
+Cell[CellGroupData[{
+Cell[6041, 251, 236, 5, 27, "Input",
+ CellID->44033497],
+Cell[6280, 258, 289, 6, 21, "Print",
+ CellID->276328220]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
