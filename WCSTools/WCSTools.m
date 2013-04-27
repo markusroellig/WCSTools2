@@ -2431,8 +2431,8 @@ WCSDisplay[FITSdata_,FITShead_,opts:OptionsPattern[]] :=
         astroStructure = WCSExtractAstroPars[FITShead];
         arrayPlotOptions = Cases[FilterRules[{opts}, Options[ArrayPlot]],Except[Rule[DataReversed,_]]];
         rulePlotRange = FilterRules[{opts},PlotRange];
-        {xdim1,xdim2} = {1,Dimensions[FITSdata][[1]]};
-        {ydim1,ydim2} = {1,Dimensions[FITSdata][[2]]};
+        {xdim1,xdim2} = {1,Dimensions[FITSdata][[2]]};
+        {ydim1,ydim2} = {1,Dimensions[FITSdata][[1]]};
         If[ rulePlotRange!= {},
             Which[
                 MatrixQ[rulePlotRange[[1,2]]]&&Length@rulePlotRange[[1,2]]== 3,
@@ -2459,17 +2459,17 @@ WCSDisplay[FITSdata_,FITShead_,opts:OptionsPattern[]] :=
             xdim1 = xrange[[1]],
             xdim1 = 1
         ];
-        If[ xrange[[2]]<Dimensions[FITSdata][[1]],
+        If[ xrange[[2]]<Dimensions[FITSdata][[2]],
             xdim2 = xrange[[2]],
-            xdim2 = Dimensions[FITSdata][[1]]
+            xdim2 = Dimensions[FITSdata][[2]]
         ];
         If[ yrange[[1]]>1,
             ydim1 = yrange[[1]]
         ];
-        If[ yrange[[2]]<Dimensions[FITSdata][[2]],
+        If[ yrange[[2]]<Dimensions[FITSdata][[1]],
             ydim2 = yrange[[2]]
         ];
-        subarray = clippedData[[ydim1;;ydim2,xdim1;;xdim2]];
+        subarray = clippedData[[ydim1;;ydim2,xdim1;;xdim2]];(* ydim is the 1st array dimensions!*)
         wcsoptions = FilterRules[Cases[{opts},Rule[a_/;(StringTake[ToString[a],3]== "WCS"),b_]:>Rule[ToExpression@StringDrop[ToString[a],3],b]],Options[ContourPlot]];
         RAoptions = FilterRules[Cases[{opts},Rule[a_/;(StringTake[ToString[a],3]== "WCS")&&(StringTake[ToString[a],-2]== "RA"),b_]:>Rule[ToExpression@StringDrop[StringDrop[ToString[a],3],-2],b]],Options[ContourPlot]];
         DECoptions = FilterRules[Cases[{opts},Rule[a_/;(StringTake[ToString[a],3]== "WCS")&&(StringTake[ToString[a],-3]== "DEC"),b_]:>Rule[ToExpression@StringDrop[StringDrop[ToString[a],3],-3],b]],Options[ContourPlot]];
@@ -2485,8 +2485,10 @@ WCSDisplay[FITSdata_,FITShead_,opts:OptionsPattern[]] :=
         If[ showFITSContours,
             FITScontours = ListContourPlot[subarray,
                 PerformanceGoal->"Speed",
+                Method -> {"DelaunayDomainScaling" -> True},
                 Evaluate[fitscontouroptions],
                 ContourShading->None,
+                Method -> {"DelaunayDomainScaling" -> True},
                 MaxPlotPoints->(Max[xdim2,ydim2]-Min[xdim1,ydim1]),
                 DataRange->{{xdim1,xdim2},{ydim1,ydim2}}]
         ];
@@ -2496,10 +2498,12 @@ WCSDisplay[FITSdata_,FITShead_,opts:OptionsPattern[]] :=
                 ListContourPlot[gridtab[[All,All,3,2]],
                     Evaluate[Join[wcsoptions,DECoptions]],
                     ContourShading->None,
+                    Method -> {"DelaunayDomainScaling" -> True},
                     DataRange->{xrange,yrange}],
                 ListContourPlot[gridtab[[All,All,3,1]],
                     Evaluate[Join[wcsoptions,RAoptions]],
                     ContourShading->None,
+                    Method -> {"DelaunayDomainScaling" -> True},
                     DataRange->{xrange,yrange}]}]
         ];
         
