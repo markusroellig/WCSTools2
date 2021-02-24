@@ -1,6 +1,8 @@
 WCSTools2
 =========
 
+![Example](https://github.com/markusroellig/WCSTools2/code/master/wcstools.jpg?raw=true)
+
 GitHub version of WCSTools for Mathematica
 
 WCSTools
