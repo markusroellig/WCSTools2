@@ -1,8 +1,8 @@
 WCSTools2
 =========
 
-![Example](https://github.com/markusroellig/WCSTools2/blob/master/wcstools1.jpg?raw=true)
 
+<img style="float: right;" src="https://github.com/markusroellig/WCSTools2/blob/master/wcstools1.jpg" width="400">
 GitHub version of WCSTools for Mathematica
 
 WCSTools
