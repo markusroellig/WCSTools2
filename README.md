@@ -20,8 +20,7 @@ http://www.atnf.csiro.au/people/mcalabre/WCS/ . If you are
 in desperate need of any of the not yet supported map projections, contact me and I will 
 implement them.
 
-The tool can also be downloaded from my webpage: 
+The basic functionality of the package is to calculate the celestial coordinates that belong to each {x,y} pixel of an astronomical FITS image. To do so the routines search the FITS headers ("Metadata" in Mathematica-lingo) for certain keywords that specify at which position of the sky the image had been taken. Unfortunately, FITS "standards" are somewhat loosely defined. This means, that a FITS file not necessarily possesses the required keywords for WCSTools to be able to display the coordinate grid. If this is the case send me the FITS header and I will try to update the package.
 
-http://www.astro.uni-koeln.de/staff/roellig/WCSTools
 
 
